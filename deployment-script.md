@@ -13,9 +13,9 @@ Preparing to install RVM and ruby
 --------------------
 
     $ sudo apt-get update
-    
+
     $ sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev
-    
+
     $ sudo apt-get install libgdbm-dev libncurses5-dev automake libtool bison libffi-dev
 
 Install RVM
@@ -31,12 +31,12 @@ NOTE: if you get any certificate error, follow the instructions and run rvm curl
     $ source ~/.bashrc
 
 -- Or `source rvm`
-    
+
     $ source ~/.rvm/scripts/rvm
 
 Install Ruby, rails and nodejs
 ------------------------------
-    
+
     $ rvm requirements
     $ rvm install 2.2.0
     $ rvm use 2.2.0 --default
@@ -47,7 +47,7 @@ Install Rails
 -------------
 
 while installing rails in server, we don't need ri-rdoc to be installed, so let's diable that in server:
-    
+
     $ vi ~/.gemrc
 
 And add below line in it
@@ -66,7 +66,7 @@ Install Nodejs
 
 Install Mysql for rails:
 ------------------------
-    
+
     $ sudo apt-get install mysql-server libmysql-ruby libmysqlclient-dev
 
 
@@ -84,7 +84,7 @@ Add below gems to your gemfile:
     gem 'capistrano-bundler', '~> 1.1.2'
 
 Bundle install
-    
+
     $ bundle install
 
 Capify: make sure there's no "Capfile" or "capfile" present
@@ -118,3 +118,4 @@ Run `cap` task to deploy your app, and fix issues that you get
 Phusion Passenger and Nginx configuration:
 ===========================================
 
+https://github.com/przbadu/tutorials-in-markdown/blob/master/learning-phusion-passenger-with-nginx.md
